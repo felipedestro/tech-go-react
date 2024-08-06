@@ -4,7 +4,6 @@ import (
 	"net/http"
 
 	"github.com/felipedestro/tech-go-react-server.git/internal/store/pgstore"
-
 	"github.com/go-chi/chi/v5"
 )
 
