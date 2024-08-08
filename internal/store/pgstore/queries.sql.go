@@ -78,13 +78,13 @@ func (q *Queries) GetRoomMessages(ctx context.Context, roomID uuid.UUID) ([]Mess
 	return items, nil
 }
 
-const getRoons = `-- name: GetRoons :many
+const getRoons = `-- name: GetRooms :many
 SELECT
     "id", "theme"
 FROM rooms
 `
 
-func (q *Queries) GetRoons(ctx context.Context) ([]Room, error) {
+func (q *Queries) GetRooms(ctx context.Context) ([]Room, error) {
 	rows, err := q.db.Query(ctx, getRoons)
 	if err != nil {
 		return nil, err
